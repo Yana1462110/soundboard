@@ -1,30 +1,40 @@
-
 <!DOCTYPE html>
+
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mijn Soundboard</title>
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="manifest" href="manifest.json">
+<title>Mijn Soundboard</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+
+
 </head>
 
 <body>
 
-    <h1>Mijn Soundboard</h1>
 
-    <button onclick="playSound('sounds/hallo.mp3')">
-        Hallo
-    </button>
+<h1>Mijn Soundboard</h1>
 
-    <button onclick="playSound('sounds/nee.mp3')">
-        Nee
-    </button>
+<button onclick="playSound('hallo.mp3')">
+    Hallo
+</button>
 
-    <script src="script.js"></script>
+<button onclick="playSound('nee.mp3')">
+    Nee
+</button>
+
+<script src="script.js"></script>
+
+<script>
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("sw.js");
+    }
+</script>
+ 
 
 </body>
 </html>
-
